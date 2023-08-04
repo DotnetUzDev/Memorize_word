@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assets\Image\download.png" />
+    <None Remove="assets\Image\english.png" />
+    <None Remove="assets\Image\englishlogo.png" />
+    <None Remove="assets\Image\flag.png" />
+    <None Remove="assets\Image\gamelogo.png" />
+    <None Remove="assets\Image\korzinka.png" />
+    <None Remove="assets\Image\korzinka1.png" />
+    <None Remove="assets\Image\orqafon.jpg" />
+    <None Remove="assets\Image\r.png" />
+    <None Remove="assets\Image\uzz.jpg" />
+    <None Remove="assets\Image\wordr.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="assets\Logos\" />
+    <Folder Include="assets\Sounds\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Securities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\Image\download.png" />
+    <Resource Include="assets\Image\english.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\englishlogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\flag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\gamelogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\korzinka.png" />
+    <Resource Include="assets\Image\korzinka1.png" />
+    <Resource Include="assets\Image\orqafon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\r.png" />
+    <Resource Include="assets\Image\uzz.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\wordr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,173 @@
+﻿<Window x:Class="Memorize_word_.Windows.CreateWordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memorize_word_.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="CreateWordWindow" Height="680" Width="800">
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <StackPanel Orientation="Vertical"
+                    Margin="20">
+            <Label Content="Word" FontWeight="DemiBold"/>
+            <Border CornerRadius="10" 
+                    Background="{DynamicResource SecondaryBackground}"
+                    Height="40">
+                <TextBox x:Name="tbWord"
+                         MaxLength="50"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                         FontSize="16"
+                         Margin="10 0 10 0"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource PrimaryTextColor}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+
+            </Border>
+            <Label Content="Translate" FontWeight="DemiBold"/>
+            <Grid Height="40">
+                <Border CornerRadius="10" 
+                    Background="{DynamicResource SecondaryBackground}"
+                    Height="40">
+                    <TextBox x:Name="tbWordTranslate"
+                             MaxLength="50"
+                             Grid.Column="2"
+                             VerticalAlignment="Center"
+                             FontSize="16"
+                             Margin="10 0 10 0"
+                             FontFamily="Jetbrains Mono"
+                             BorderThickness="0"
+                             Foreground="{DynamicResource PrimaryTextColor}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+                </Border>
+            </Grid>
+            <Label Content="Example" FontWeight="DemiBold"/>
+            <Border CornerRadius="10" 
+                    Background="{DynamicResource SecondaryBackground}"
+                    Height="40">
+                <TextBox x:Name="tbexample"
+                         FontSize="16"
+                         Margin="10 10 10 10"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource PrimaryTextColor}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+            </Border>
+            <Label Content="Description" FontWeight="DemiBold"/>
+            <Border CornerRadius="10" 
+                    Background="{DynamicResource SecondaryBackground}"
+                    Height="40">
+                <TextBox x:Name="tbdescription"
+                         FontSize="16"
+                         Margin="10 10 10 10"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource PrimaryTextColor}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+            </Border>
+            
+            <Grid Height="230">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" >
+                    <Label Content="Image 1" FontSize="20" Foreground="{DynamicResource PrimaryTextColor}"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Border Background="{DynamicResource SecondaryBackground}">
+                            <Border x:Name="ImgWordImage"
+                                Height="190" 
+                                Width="240"
+                                CornerRadius="10">
+                                <Border.Background>
+                                    <ImageBrush x:Name="ImgB1" />
+                                </Border.Background>
+                            </Border>
+
+                        </Border>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1" >
+                    <Label Content="Image 2" FontSize="20" Foreground="{DynamicResource PrimaryTextColor}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Border Background="{DynamicResource SecondaryBackground}">
+                            <Border x:Name="ImgWordImage2"
+                            Height="190" 
+                            Width="242"
+                            CornerRadius="10">
+                                <Border.Background>
+                                    <ImageBrush x:Name="ImgB2" />
+                                </Border.Background>
+                            </Border>
+                        </Border>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Height="250" >
+                    <Label Content="Image 3"
+                           FontSize="20"
+                           Foreground="{DynamicResource PrimaryTextColor}"
+                           />
+                    <StackPanel Orientation="Horizontal">
+                        <Border Background="{DynamicResource SecondaryBackground}">
+                            <Border x:Name="ImgWordImage3"
+                            Height="190" 
+                            Width="250"
+                            CornerRadius="10">
+                                <Border.Background>
+                                    <ImageBrush x:Name="ImgB3" />
+                                </Border.Background>
+                            </Border>
+                        </Border>
+
+                    </StackPanel>
+                </StackPanel>
+
+
+            </Grid>
+            <Grid Height="40" Margin="0 0 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Height="40" 
+                        Width="40"
+                        Content="..." 
+                        FontSize="20"
+                        FontWeight="DemiBold"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Left"
+                        Margin="197,0,0,0" Click="Button_Click"/>
+                <Button Height="40" 
+                        Grid.Column="1"
+                        Width="40"
+                        Content="..." 
+                        FontSize="20"
+                        FontWeight="DemiBold"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="180 0 0 0" Click="Button_Click_1"/>
+                <Button Grid.Column="2"
+                        Height="40" 
+                        Width="40"
+                        Content="..." 
+                        FontSize="20"
+                        FontWeight="DemiBold"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="180 0 0 0" Click="Button_Click_2"/>
+            </Grid>
+            <Button x:Name="btnSave" 
+                    Click="btnSave_Click" 
+                    Margin="0 10 0 10" 
+                    Height="50" 
+                    Style="{DynamicResource Buttonsave}" Content="Save"/>
+        </StackPanel>
+    </Grid>
+</Window>

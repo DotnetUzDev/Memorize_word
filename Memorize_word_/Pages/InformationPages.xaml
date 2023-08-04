@@ -1,0 +1,35 @@
+﻿<Page x:Class="Memorize_word_.Pages.InformationPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Memorize_word_.Pages"
+      mc:Ignorable="d" 
+      Background="{DynamicResource PrimaryBackground}"
+      d:DesignHeight="650" d:DesignWidth="800"
+      Title="InformationPages">
+    <Border CornerRadius="8" Margin="10"  Background="{DynamicResource SecondaryBorderColor}">
+        <Grid>
+            
+       
+            <Label Content="Aplication Informations!" FontSize="35"/>
+            <TextBox IsReadOnly="False" Margin="10 50" Background="{DynamicResource SecondaryBorderColor}" TextWrapping="Wrap" Text="The game displays a list of words to remember during few seconds. Then, wen the words disappear, you have to fill in the fields with the words that you can remember, regardless of the order.
+The purpose of the game is to remember as many words as possible .
+
+You can change the game's difficulty level thanks to the buttons located below the game. The default mode is  words. For beginners, we recommend that you start with a small number of words.
+
+This game is responsive, so it's compatible with all devices: desktop, tablets and smartphones. The content and the game adjust automatically to your device, so do not hesitate to play on a tablet or a smartphone.
+                     
+                     
+                     
+                     
+                                                                                                                                                                                                                                                                  O'yin bir necha soniya davomida eslab qolish uchun so'zlar ro'yxatini ko'rsatadi. So'ngra, so'zlar yo'qolgandan so'ng, maydonlarni tartibdan qat'i nazar, eslay oladigan so'zlar bilan to'ldirishingiz kerak.
+O'yinning maqsadi - iloji boricha ko'proq so'zlarni eslab qolish.
+
+O'yin ostida joylashgan tugmalar tufayli o'yinning qiyinchilik darajasini o'zgartirishingiz mumkin. Standart rejim . Yangi boshlanuvchilar uchun oz sonli sozlar bilan boshlashingizni tavsiya qilamiz.
+
+Bu o'yin sezgir, shuning uchun u barcha qurilmalar bilan mos keladi: ish stoli, planshetlar va smartfonlar. Tarkib va ​​oʻyin avtomatik ravishda qurilmangizga moslashtiriladi, shuning uchun planshet yoki smartfonda oʻynashdan tortinmang.  " FontSize="25"/>
+        </Grid>
+
+    </Border>
+</Page>
