@@ -69,12 +69,16 @@
                     Background="{DynamicResource PrimaryBackground}"
                     CornerRadius="0 0 0 10">
                 <StackPanel>
-                    
+                    <RadioButton x:Name="rbDashboards"
+                                Content="Dashboard"
+                                Tag="{DynamicResource dashboard}"
+                                Style="{DynamicResource MenuButton}"
+                                 Click="rbDashboard_Checked"/>
                     <RadioButton x:Name="rbAddWord"
                                 Content="Words"
                                 Tag="{DynamicResource createword}"
                                 Style="{DynamicResource MenuButton}"
-                                Click="rbAddWord_Checked" Checked="rbAddWord_Checked_1"/>
+                                Click="rbAddWord_Checked"/>
                     <RadioButton x:Name="rbTest"
                                 Content="Test" 
                                 Tag="{DynamicResource Tests}"

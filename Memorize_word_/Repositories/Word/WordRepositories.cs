@@ -26,38 +26,34 @@ public class WordRepositories : IWordRepositories
 
     public async Task<int> CreateAsync(Words obj)
     {
-        //try
-        //{
-
-        //    }
-        //}
-        //catch
-        //{
-        //    return 0;
-        //}
-        //finally
-        //{
-        //    await _connection.CloseAsync();
-        //}
-        await _connection.OpenAsync();
-
-        string query = "INSERT INTO word(" +
-            "word,example,describtion,image1,image2,image3,created_at,updated_at,translate)" +
-            "VALUES (@word,@example,@describtion,@image1,@image2,@image3,@created_at,@updated_at,@translate);";
-        await using (var command = new NpgsqlCommand(query, _connection))
+        try
         {
-            command.Parameters.AddWithValue("Word", obj.Word);
-            command.Parameters.AddWithValue("example", obj.example);
-            command.Parameters.AddWithValue("describtion", obj.describtion);
-            command.Parameters.AddWithValue("image1", obj.image1);
-            command.Parameters.AddWithValue("image2", obj.image2);
-            command.Parameters.AddWithValue("image3", obj.image3);
-            command.Parameters.AddWithValue("created_at", obj.CreatedAt);
-            command.Parameters.AddWithValue("updated_at", obj.UpdatedAt);
-            command.Parameters.AddWithValue("translate", obj.translate);
+            await _connection.OpenAsync();
+            string query = "INSERT INTO word(" +
+                "word,example,describtion,image1,image2,image3,created_at,updated_at,translate)" +
+                "VALUES (@word,@example,@describtion,@image1,@image2,@image3,@created_at,@updated_at,@translate);";
+            await using (var command = new NpgsqlCommand(query, _connection))
+            {
+                command.Parameters.AddWithValue("Word", obj.Word);
+                command.Parameters.AddWithValue("example", obj.example);
+                command.Parameters.AddWithValue("describtion", obj.describtion);
+                command.Parameters.AddWithValue("image1", obj.image1);
+                command.Parameters.AddWithValue("image2", obj.image2);
+                command.Parameters.AddWithValue("image3", obj.image3);
+                command.Parameters.AddWithValue("created_at", obj.CreatedAt);
+                command.Parameters.AddWithValue("updated_at", obj.UpdatedAt);
+                command.Parameters.AddWithValue("translate", obj.translate);
 
-            var dbResult = await command.ExecuteNonQueryAsync();
-            return dbResult;
+                var dbResult = await command.ExecuteNonQueryAsync();
+                return dbResult;
+            }
+        }
+        catch
+        {
+            return 0;
+        }
+        finally
+        {
             await _connection.CloseAsync();
         }
     }

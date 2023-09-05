@@ -43,12 +43,7 @@ namespace Memorize_word_
             Application.Current.Shutdown();
         }
 
-        private void rbDashboard_Checked(object sender, RoutedEventArgs e)
-        {
-            DashboardPage page = new DashboardPage();
-            PageNavigator.Content = page;
-        }
-
+        
         private void rbTest_Checked(object sender, RoutedEventArgs e)
         {
             TestAddPage page = new TestAddPage();
@@ -82,19 +77,35 @@ namespace Memorize_word_
             PageNavigator.Content = page;
         }
 
-        private void rbDashboard_Checked_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            rbAddWord_Checked_1(sender, e);
+            rbdashboard_Checked_1(sender, e);
         }
 
         private void rbAddWord_Checked_1(object sender, RoutedEventArgs e)
         {
             AddWordPage page = new AddWordPage();
+            PageNavigator.Content = page;
+        }
+
+        private void rbDashboard(object sender, RoutedEventArgs e)
+        {
+            DashboardPage page = new DashboardPage();
+            PageNavigator.Content = page;
+        }
+
+       
+
+        private void rbdashboard_Checked_1(object sender, RoutedEventArgs e)
+        {
+            DashboardPage page = new DashboardPage();
+            PageNavigator.Content = page;
+        }
+
+        private void rbDashboard_Checked(object sender, RoutedEventArgs e)
+        {
+            DashboardPage page = new DashboardPage();
             PageNavigator.Content = page;
         }
     }

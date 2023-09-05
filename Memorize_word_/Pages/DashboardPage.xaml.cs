@@ -31,5 +31,10 @@ namespace Memorize_word_.Pages
             this._wordRepositories = new WordRepositories();
         }
         public object PageNavigator { get; private set; }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
