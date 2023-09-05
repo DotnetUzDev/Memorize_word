@@ -35,6 +35,7 @@ namespace Memorize_word_.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             if (tbtestnumber.Text.Length > 0)
             {
                 dt = int.Parse(tbtestnumber.Text);

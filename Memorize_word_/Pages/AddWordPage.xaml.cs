@@ -82,7 +82,7 @@ namespace Memorize_word_.Pages
             }
         }
 
-        private void btnCreates_Click(object sender, RoutedEventArgs e)
+        private void btnsearch_Click(object sender, RoutedEventArgs e)
         {
             string str = tbSearch.Text;
             var resultMedicine = words.Where(m => m.Word.ToLower().StartsWith(str)).ToList();

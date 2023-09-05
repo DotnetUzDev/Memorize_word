@@ -2,27 +2,15 @@
 using Memorize_word_.Pages;
 using Memorize_word_.Repositories.Word;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Memorize_word_.Windows
 {
-    /// <summary>
-    /// Interaction logic for TestWindow.xaml
-    /// </summary>
+
     public partial class TestWindow : Window
     {
-        
+
         private readonly IWordRepositories _wordRepositories;
         public int k { get; set; }
 
@@ -59,11 +47,9 @@ namespace Memorize_word_.Windows
 
         private async void ButtonTestNext_Click(object sender, RoutedEventArgs e)
         {
-            
-            
-            if(k>=son)
+            if (k >= son)
             {
-                
+
                 MainWindow mainWindow = GetMainWindow();
                 Hisob hisob = new Hisob();
                 hisob.lbtogri.Content = togri;
@@ -74,31 +60,33 @@ namespace Memorize_word_.Windows
             else
             {
                 var w = await _wordRepositories.GetAllAsync(new Utils.PaginationParams(1, 100));
-            string s2 = w[k].example;
-            Random random = new Random();
-            h = random.Next(1, 4);
-            lbSavoltest2.Text = "1:" + s2;
-            lbsavolnumber.Content = $"{k+1}-Savol";
-            buttonA.Content = w[k + 1].Word;
-            buttonB.Content = w[k + 2].Word;
-            buttonC.Content = w[k + 3].Word;
-            buttonD.Content = w[k + 4].Word;
-            if (h == 1)
-            {
-                buttonA.Content = w[k].Word;
-            }
-            else if (h == 2)
-            {
-                buttonB.Content = w[k].Word;
-            }
-            else if (h == 3)
-            {
-                buttonC.Content = w[k].Word;
-            }
-            else if (h == 4)
-            {
-                buttonD.Content = w[k].Word;
-            }
+
+                string s2 = w[k].example;
+                s2 = satr(s2, w[k].Word);
+                Random random = new Random();
+                h = random.Next(1, 4);
+                lbSavoltest2.Text = "1:" + s2;
+                lbsavolnumber.Content = $"{k + 1}-Savol";
+                buttonA.Content = w[k + 1].Word;
+                buttonB.Content = w[k + 2].Word;
+                buttonC.Content = w[k + 3].Word;
+                buttonD.Content = w[k + 4].Word;
+                if (h == 1)
+                {
+                    buttonA.Content = w[k].Word;
+                }
+                else if (h == 2)
+                {
+                    buttonB.Content = w[k].Word;
+                }
+                else if (h == 3)
+                {
+                    buttonC.Content = w[k].Word;
+                }
+                else if (h == 4)
+                {
+                    buttonD.Content = w[k].Word;
+                }
             }
             k++;
         }
@@ -106,38 +94,39 @@ namespace Memorize_word_.Windows
         {
             string[] s = a.Split(" ");
             string t = "";
-                for (int e = 0; e < s.Length; e++)
+            for (int e = 0; e < s.Length; e++)
+            {
+                bool lamp = false;
+                string g = s[e];
+                for (int i = 0; i < b.Length; i++)
                 {
-                    bool lamp = false;
-                    string g = s[e];
-                    for (int i = 0; i < b.Length; i++)
+                    try
                     {
-                        try
+                        if (g[i] != b[i])
                         {
-                            if (g[i] != b[i])
-                            {
-                                lamp = true;
-                                
-                            }
-                        }
-                        catch
-                        {
-                            continue;
+                            lamp = true;
+
                         }
                     }
-                    if (lamp == false)
+                    catch
                     {
-                        t += "_______ ";
+                        continue;
                     }
-                    else t += g + " ";
                 }
+                if (lamp == false)
+                {
+                    for(int i=0;i<b.Length;i++)
+                        t += "* ";
+                }
+                else t += g + " ";
+            }
             return t;
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            h = random.Next(1,4);
+            h = random.Next(1, 4);
             var w = await _wordRepositories.GetAllAsync(new Utils.PaginationParams(1, 100));
             string s1 = w[k].describtion;
             string s2 = w[k].example;
@@ -206,8 +195,8 @@ namespace Memorize_word_.Windows
         }
         public async void Tem(int j)
         {
-            
-            if (j==1)
+
+            if (j == 1)
             {
                 if (j == h)
                 {
@@ -269,7 +258,7 @@ namespace Memorize_word_.Windows
             buttonB.Style = buttonw.Style;
             buttonC.Style = buttonw.Style;
             buttonD.Style = buttonw.Style;
-            
+
         }
         public static MainWindow GetMainWindow()
         {

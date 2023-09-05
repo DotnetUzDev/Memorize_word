@@ -50,16 +50,16 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Path Grid.Column="0" Stretch="Uniform" Margin="0 0 0 20" Height="25" Width="25" Fill="DarkBlue" Data="{DynamicResource search}"/>
-                        <Button x:Name="btnCreates"
+                        <Button x:Name="btnsearch"
                            Grid.Column="1"
-                           Background="#e1e1"
+                           
                                 
-                            Width="50"
-                            Height="35"
-                        Margin="0 0 0 30"
+                            Width="20"
+                            Height="20"
+                        Margin="0 0 20 30"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Right"
-                            Content="S" Click="btnCreates_Click"
+                            Content="S" Click="btnsearch_Click"
                             
                             />
                         <TextBox x:Name="tbSearch" 
