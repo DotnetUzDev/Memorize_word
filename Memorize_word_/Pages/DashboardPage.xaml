@@ -12,8 +12,10 @@
 
     <Grid>
         <Grid>
-            <Border Margin="10" CornerRadius="7" Background="{DynamicResource SecondaryBorderColor}">
-                <TextBox Height="150" Width="500" Background="{DynamicResource SecondaryBorderColor}" FontSize="85" Text="Dashboard" FontWeight="DemiBold" FontFamily=" " FontStyle="Oblique" TextChanged="TextBox_TextChanged"/>
+            <Border Margin="10" CornerRadius="7" >
+                <Border.Background>
+                    <ImageBrush ImageSource="/assets/Image/dashboard.png"/>
+                </Border.Background>
             </Border>
         </Grid>
     </Grid>

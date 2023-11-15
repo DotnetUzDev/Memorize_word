@@ -336,7 +336,39 @@
         </Setter>
     </Style>
 
-
+    <Style x:Key="Buttonsearch" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="10 0"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="B" CornerRadius="10" Background="#04BE7A">
+                        <Label FontSize="10"
+                               Margin="10 0"
+                               FontFamily="Jetbrains Mono"
+                               FontWeight="SemiBold"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Content="{TemplateBinding Content}"
+                               />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#049761"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="B" Property="Background" Value="#04BE7A"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#03774C"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <Style x:Key="ButtonXX" TargetType="{x:Type Button}">
         <Setter Property="Margin" Value="10 0"/>
         <Setter Property="Padding" Value="10"/>

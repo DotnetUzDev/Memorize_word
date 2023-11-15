@@ -29,20 +29,20 @@
                 <Label Content="Game Number" 
                        FontWeight="DemiBold"
                        FontSize="60" 
-                       Margin="0 0 0 150"
+                       Margin="50 0 0 150"
                        Height="95" 
                        Width="450"
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center"/>
                 <TextBox 
                     x:Name="tbGameNumber"
-                    Height="90"
+                    Height="50"
                     HorizontalContentAlignment="Center"
                     
-                    FontSize="60"
+                    FontSize="26"
                     FontWeight="DemiBold"
                     Margin="0 100 0 0" 
-                    Width="450" 
+                    Width="250" 
                     VerticalAlignment="Center" 
                        HorizontalAlignment="Center"/>
                 <Button Height="50" 

@@ -20,8 +20,6 @@ public class PaginationParams
         PageNumber = pageNumber;
         
         PageSize = pageSize;
-
-        
     }
     public PaginationParams()
     {

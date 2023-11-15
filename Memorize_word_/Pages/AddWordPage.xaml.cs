@@ -4,21 +4,11 @@ using Memorize_word_.Interfase.WordRep;
 using Memorize_word_.Repositories.Word;
 using Memorize_word_.Utils;
 using Memorize_word_.Windows;
-using Microsoft.Windows.Themes;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Memorize_word_.Pages
 {
@@ -26,11 +16,11 @@ namespace Memorize_word_.Pages
     /// Interaction logic for AddWordPage.xaml
     /// </summary>
     /// 
-    
-    
+
+
     public partial class AddWordPage : Page
     {
-        
+
         private readonly IWordRepositories _wordRepositories;
         private IList<Words> words { get; set; }
         public AddWordPage()
@@ -45,7 +35,7 @@ namespace Memorize_word_.Pages
 
             CreateWordWindow createWordWindow = new CreateWordWindow();
             createWordWindow.ShowDialog();
-            
+
         }
         public async Task RefreshAsync()
         {
@@ -56,7 +46,7 @@ namespace Memorize_word_.Pages
                 PageSize = 30
             };
             words = await _wordRepositories.GetAllAsync(paginationParams);
-            foreach(Words word in words)
+            foreach (Words word in words)
             {
                 WordComponenT wordComponenT = new WordComponenT();
                 wordComponenT.SetData(word);

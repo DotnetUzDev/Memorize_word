@@ -78,7 +78,7 @@
                                 Content="Words"
                                 Tag="{DynamicResource createword}"
                                 Style="{DynamicResource MenuButton}"
-                                Click="rbAddWord_Checked"/>
+                                Click="rbAddWord_Checked" Checked="rbAddWord_Checked_2"/>
                     <RadioButton x:Name="rbTest"
                                 Content="Test" 
                                 Tag="{DynamicResource Tests}"

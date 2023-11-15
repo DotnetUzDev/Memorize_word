@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assets\Image\Dashboard.png" />
     <None Remove="assets\Image\download.png" />
     <None Remove="assets\Image\english.png" />
     <None Remove="assets\Image\englishlogo.png" />
@@ -33,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="assets\Image\dashboard.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
     <Resource Include="assets\Image\download.png" />
     <Resource Include="assets\Image\english.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

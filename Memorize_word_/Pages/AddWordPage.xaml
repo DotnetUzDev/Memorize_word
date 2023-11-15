@@ -52,14 +52,16 @@
                         <Path Grid.Column="0" Stretch="Uniform" Margin="0 0 0 20" Height="25" Width="25" Fill="DarkBlue" Data="{DynamicResource search}"/>
                         <Button x:Name="btnsearch"
                            Grid.Column="1"
-                           
-                                
-                            Width="20"
-                            Height="20"
-                        Margin="0 0 20 30"
+                           Background="#04BE7A"
+                                FontWeight="DemiBold"
+                            Width="60"
+                            Height="45"
+                               Style="{DynamicResource Buttonsearch}"
+                        Margin="0 0 0 25"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Right"
-                            Content="S" Click="btnsearch_Click"
+                                FontSize="15"
+                            Content="Search" Click="btnsearch_Click"
                             
                             />
                         <TextBox x:Name="tbSearch" 

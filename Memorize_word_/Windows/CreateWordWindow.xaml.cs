@@ -5,20 +5,10 @@ using Memorize_word_.Interfase.WordRep;
 using Memorize_word_.Repositories.Word;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xml.Linq;
 
 namespace Memorize_word_.Windows
 {
@@ -35,30 +25,42 @@ namespace Memorize_word_.Windows
         }
 
         private async void btnSave_Click(object sender, RoutedEventArgs e)
-        
+
         {
             Words words = new Words();
             words.Word = tbWord.Text;
+            string imagepath1 = "";
+            string imagepath2 = "";
+            string imagepath3 = "";
             words.translate = tbWordTranslate.Text;
             words.example = tbexample.Text;
             words.describtion = tbdescription.Text;
-            string imagepath1 = ImgB1.ImageSource.ToString();
+            if(ImgB1.ImageSource != null)
+            {
+                imagepath1 = ImgB1.ImageSource.ToString();
+            }
             if (!String.IsNullOrEmpty(imagepath1))
                 words.image1 = await CopyImageAsync(imagepath1,
                    ContentConstans.IMAGE_CONTENTS_PATH);
-            string imagepath2 = ImgB2.ImageSource.ToString();
+
+            if (ImgB2.ImageSource != null)
+            {
+                imagepath2 = ImgB1.ImageSource!.ToString();
+            }
             if (!String.IsNullOrEmpty(imagepath2))
                 words.image2 = await CopyImageAsync(imagepath2,
                    ContentConstans.IMAGE_CONTENTS_PATH);
-            string imagepath3 = ImgB3.ImageSource.ToString();
+            if (ImgB3.ImageSource != null)
+            {
+                imagepath3 = ImgB1.ImageSource!.ToString();
+            }
             if (!String.IsNullOrEmpty(imagepath3))
                 words.image3 = await CopyImageAsync(imagepath3,
                    ContentConstans.IMAGE_CONTENTS_PATH);
             words.CreatedAt = words.UpdatedAt = TimeHealpers.GetDateTime();
             var result = await _wordRepositories.CreateAsync(words);
-            if(result>0)
+            if (result > 0)
             {
-                MessageBox.Show("MUVAFFAQIYATLI SAQLANDI!!");
                 this.Close();
             }
         }

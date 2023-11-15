@@ -36,7 +36,7 @@ namespace Memorize_word_.Components
         {
             lbwordcom.Content = words.translate;
             lbwordtrcom.Content = words.Word;
-            imagebrush.ImageSource = new BitmapImage(new System.Uri(words.image1,UriKind.Relative));
+            //imagebrush.ImageSource = new BitmapImage(new Uri(words.image1,UriKind.Relative));
             Words = words;
         }
 

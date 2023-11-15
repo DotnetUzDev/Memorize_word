@@ -108,5 +108,15 @@ namespace Memorize_word_
             DashboardPage page = new DashboardPage();
             PageNavigator.Content = page;
         }
+
+        private void rbDashboards_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rbAddWord_Checked_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

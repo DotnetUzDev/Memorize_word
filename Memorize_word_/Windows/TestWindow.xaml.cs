@@ -163,28 +163,28 @@ namespace Memorize_word_.Windows
         {
             j = 2;
             Tem(j);
-            await Task.Delay(1000);
+            await Task.Delay(100);
             ButtonTestNext_Click(sender, e);
         }
         private async void buttonD_Click(object sender, RoutedEventArgs e)
         {
             j = 4;
             Tem(j);
-            await Task.Delay(1000);
+            await Task.Delay(100);
             ButtonTestNext_Click(sender, e);
         }
         private async void buttonA_Click(object sender, RoutedEventArgs e)
         {
             j = 1;
             Tem(j);
-            await Task.Delay(1000);
+            await Task.Delay(100);
             ButtonTestNext_Click(sender, e);
         }
         private async void buttonC_Click(object sender, RoutedEventArgs e)
         {
             j = 3;
             Tem(j);
-            await Task.Delay(1000);
+            await Task.Delay(100);
             ButtonTestNext_Click(sender, e);
 
         }
@@ -253,7 +253,7 @@ namespace Memorize_word_.Windows
                     notogri++;
                 }
             }
-            await Task.Delay(1000);
+            await Task.Delay(100);
             buttonA.Style = buttonw.Style;
             buttonB.Style = buttonw.Style;
             buttonC.Style = buttonw.Style;
@@ -262,7 +262,7 @@ namespace Memorize_word_.Windows
         }
         public static MainWindow GetMainWindow()
         {
-            MainWindow mainWindow = null;
+            MainWindow mainWindow = null!;
 
             foreach (Window window in Application.Current.Windows)
             {
@@ -276,7 +276,7 @@ namespace Memorize_word_.Windows
                     }
                 }
             }
-            return mainWindow;
+            return mainWindow!;
 
         }
     }
