@@ -81,7 +81,7 @@
                 </Border>
                 
             </StackPanel>
-            <ScrollViewer Grid.Row="1">
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                 <WrapPanel x:Name="wrpWord"/>
             </ScrollViewer>
         </Grid>

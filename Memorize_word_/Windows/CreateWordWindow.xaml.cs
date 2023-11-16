@@ -2,6 +2,7 @@
 using Memorize_word_.Entities.WordEntities;
 using Memorize_word_.Healpers;
 using Memorize_word_.Interfase.WordRep;
+using Memorize_word_.Pages;
 using Memorize_word_.Repositories.Word;
 using Microsoft.Win32;
 using System;
@@ -17,10 +18,12 @@ namespace Memorize_word_.Windows
     /// </summary>
     public partial class CreateWordWindow : Window
     {
+        private readonly AddWordPage _page;
         private readonly IWordRepositories _wordRepositories;
         public CreateWordWindow()
         {
             InitializeComponent();
+            this._page = new AddWordPage();
             this._wordRepositories = new WordRepositories();
         }
 
@@ -59,6 +62,7 @@ namespace Memorize_word_.Windows
                    ContentConstans.IMAGE_CONTENTS_PATH);
             words.CreatedAt = words.UpdatedAt = TimeHealpers.GetDateTime();
             var result = await _wordRepositories.CreateAsync(words);
+            await _page.RefreshAsync();
             if (result > 0)
             {
                 this.Close();

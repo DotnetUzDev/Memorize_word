@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Memorize_word_.Components"
              mc:Ignorable="d" 
-             Height="300" 
+             Height="200" 
              Width="245">
     <Border Background="{DynamicResource PrimaryBackground}">
         <Border
@@ -27,7 +27,7 @@
                        Width="60"
                        VerticalAlignment="Stretch"
                        HorizontalAlignment="Left"
-                       Margin="0 0 0 70"
+                       Margin="0 18 0 0"
                        Content="Word:"
                        FontSize="16"
                        FontWeight="DemiBold"/>
@@ -35,7 +35,7 @@
                        Width="80"
                        VerticalAlignment="Stretch"
                        HorizontalAlignment="Left"
-                       Margin="0 0 0 20"
+                       Margin="0 80 0 0"
                        Content="Translate:"
                        FontSize="16"
                        FontWeight="DemiBold"/>
@@ -43,7 +43,7 @@
                        Width="120"
                        VerticalAlignment="Stretch"
                        HorizontalAlignment="Left"
-                       Margin="80 0 0 20"
+                       Margin="80 80 0 0"
                        x:Name="lbwordcom"
                        FontSize="16"
                        FontWeight="DemiBold"/>
@@ -51,11 +51,11 @@
                        Width="120"
                        VerticalAlignment="Stretch"
                        HorizontalAlignment="Left"
-                       Margin="80 0 0 70"
+                       Margin="80 18 0 0"
                        x:Name="lbwordtrcom"
                        FontSize="16"
                        FontWeight="DemiBold"/>
-                <Border Height="120"
+                <Border Height="20"
                         Width="120"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Center"

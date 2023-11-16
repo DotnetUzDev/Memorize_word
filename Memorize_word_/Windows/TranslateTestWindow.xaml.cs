@@ -103,7 +103,7 @@ namespace Memorize_word_.Windows
         }
         public static MainWindow GetMainWindow()
         {
-            MainWindow mainWindow = null;
+            MainWindow mainWindow = null!;
 
             foreach (Window window in Application.Current.Windows)
             {
@@ -117,7 +117,7 @@ namespace Memorize_word_.Windows
                     }
                 }
             }
-            return mainWindow;
+            return mainWindow!;
 
         }
 
@@ -178,6 +178,18 @@ namespace Memorize_word_.Windows
                 {
                     trtestA.Style = buttonqizil.Style;
                     notogri++;
+                    if(h==2)
+                    {
+                        trtestB.Style = buttonyashil.Style;
+                    }
+                    if (h == 3)
+                    {
+                        trtestC.Style = buttonyashil.Style;
+                    }
+                    if (h == 4)
+                    {
+                        trtestD.Style = buttonyashil.Style;
+                    }
                 }
             }
 
@@ -193,6 +205,18 @@ namespace Memorize_word_.Windows
                 {
                     trtestB.Style = buttonqizil.Style;
                     notogri++;
+                    if (h == 1)
+                    {
+                        trtestA.Style = buttonyashil.Style;
+                    }
+                    if (h == 3)
+                    {
+                        trtestC.Style = buttonyashil.Style;
+                    }
+                    if (h == 4)
+                    {
+                        trtestD.Style = buttonyashil.Style;
+                    }
                 }
             }
             else if (j == 3)
@@ -207,6 +231,18 @@ namespace Memorize_word_.Windows
                 {
                     trtestC.Style = buttonqizil.Style;
                     notogri++;
+                    if (h == 2)
+                    {
+                        trtestB.Style = buttonyashil.Style;
+                    }
+                    if (h == 1)
+                    {
+                        trtestA.Style = buttonyashil.Style;
+                    }
+                    if (h == 4)
+                    {
+                        trtestD.Style = buttonyashil.Style;
+                    }
                 }
             }
             else if (j == 4)
@@ -221,6 +257,18 @@ namespace Memorize_word_.Windows
                 {
                     trtestD.Style = buttonqizil.Style;
                     notogri++;
+                    if (h == 2)
+                    {
+                        trtestB.Style = buttonyashil.Style;
+                    }
+                    if (h == 3)
+                    {
+                        trtestC.Style = buttonyashil.Style;
+                    }
+                    if (h == 1)
+                    {
+                        trtestA.Style = buttonyashil.Style;
+                    }
                 }
             }
             await Task.Delay(1000);
