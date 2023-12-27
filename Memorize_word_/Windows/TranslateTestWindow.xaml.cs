@@ -136,7 +136,7 @@ namespace Memorize_word_.Windows
             }
             else
             {
-                var w = await _wordRepositories.GetAllAsync(new Utils.PaginationParams(1, 100));
+                var w = await _wordRepositories.GetAllAsync(new Utils.PaginationParams(10, 100));
                 Random random = new Random();
                 h = random.Next(1, 4);
                 lbtrtest.Content = w[k].Word;

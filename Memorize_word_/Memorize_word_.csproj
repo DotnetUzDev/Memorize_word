@@ -8,12 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Enums\**" />
+    <Compile Remove="Securities\**" />
+    <EmbeddedResource Remove="Enums\**" />
+    <EmbeddedResource Remove="Securities\**" />
+    <None Remove="Enums\**" />
+    <None Remove="Securities\**" />
+    <Page Remove="Enums\**" />
+    <Page Remove="Securities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="assets\Image\Dashboard.png" />
     <None Remove="assets\Image\download.png" />
     <None Remove="assets\Image\english.png" />
     <None Remove="assets\Image\englishlogo.png" />
     <None Remove="assets\Image\flag.png" />
     <None Remove="assets\Image\gamelogo.png" />
+    <None Remove="assets\Image\gamess.png" />
     <None Remove="assets\Image\korzinka.png" />
     <None Remove="assets\Image\korzinka1.png" />
     <None Remove="assets\Image\orqafon.jpg" />
@@ -25,8 +37,6 @@
   <ItemGroup>
     <Folder Include="assets\Logos\" />
     <Folder Include="assets\Sounds\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Securities\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +59,9 @@
     </Resource>
     <Resource Include="assets\Image\gamelogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\Image\gamess.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="assets\Image\korzinka.png" />
     <Resource Include="assets\Image\korzinka1.png" />

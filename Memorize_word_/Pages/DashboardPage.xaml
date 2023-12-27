@@ -14,7 +14,7 @@
         <Grid>
             <Border Margin="10" CornerRadius="7" >
                 <Border.Background>
-                    <ImageBrush ImageSource="/assets/Image/dashboard.png"/>
+                    <ImageBrush ImageSource="/assets/Image/gamess.png"/>
                 </Border.Background>
             </Border>
         </Grid>

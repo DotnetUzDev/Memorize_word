@@ -2,25 +2,13 @@
 using Memorize_word_.Repositories.Word;
 using Memorize_word_.Windows;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Memorize_word_.Pages
 {
-    /// <summary>
-    /// Interaction logic for GamePage.xaml
-    /// </summary>
     public partial class GamePage : Page
     {
         private readonly IWordRepositories _wordRepositories;
@@ -30,7 +18,6 @@ namespace Memorize_word_.Pages
             InitializeComponent();
             this._wordRepositories = new WordRepositories();
         }
-
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -39,7 +26,6 @@ namespace Memorize_word_.Pages
                 int dt = int.Parse(tbGameNumber.Text);
                 GameWindow gameWindow1 = new GameWindow(dt);
                 gameWindow1.ShowDialog();
-
             }
             else
             {
@@ -74,12 +60,9 @@ namespace Memorize_word_.Pages
                     else if (i == 7) gameWindow.tbtextgame8.Visibility = Visibility.Visible;
                     else if (i == 8) gameWindow.tbtextgame9.Visibility = Visibility.Visible;
                     else if (i == 9) gameWindow.tbtextgame10.Visibility = Visibility.Visible;
-
                 }
-                
             }
         }
-
         private void Button_Clicked(object sender, RoutedEventArgs e)
         {
 
